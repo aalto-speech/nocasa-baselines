@@ -1,0 +1,5 @@
+scikit-learn==1.6.1
+pandas==2.2.3
+opensmile==2.5.1
+tqdm==4.67.1
+
