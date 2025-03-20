@@ -1,7 +1,7 @@
 # nocasa-baselines
 Baseline codes for the NOCASA Challenge
 
-In this repository we share the baseline codes for the [IEEE-MLSP NOCASA Challenge]<https://teflon.aalto.fi/nocasa-2025/>
+In this repository we share the baseline codes for the [IEEE-MLSP NOCASA Challenge](https://teflon.aalto.fi/nocasa-2025/)
 
 ## SVM model training
 
