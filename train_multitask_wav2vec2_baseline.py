@@ -340,7 +340,7 @@ def main():
         trust_remote_code=model_args.trust_remote_code,
     )
 
-    processor =  AutoProcessor.from_pretrained(
+    processor =  Wav2Vec2Processor.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=model_args.cache_dir
         )
