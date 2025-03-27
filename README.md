@@ -92,4 +92,4 @@ python eval_multitask_wav2vec2_baseline.py \
 The official multi-task wav2vec 2.0 baseline model is available at [🤗 Hub](TODO). The model's performance on the test set is the following:
 |   F1  | UAR   | Accuracy | MAE (mean absolute error) |
 | ---   | ---   | ---      | ---                       |
-| 38.87 | 37.92 | 55.48    |           0.52            |
+| 37.41 | 36.37 | 54.45    |           0.55            |
