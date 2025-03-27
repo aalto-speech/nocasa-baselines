@@ -201,6 +201,9 @@ def main():
         batch_size=training_args.eval_batch_size
         )
 
+    # Rename the prediction column to "predicted" for proper evaluation in Codabench
+    result = result.rename_column(data_args.label_column_name, "predicted")
+
     result.to_csv(
         f"{training_args.output_dir}/{'_'.join(model_args.model_name_or_path.split('/')[-2:])}.csv",
         encoding='utf-8',
