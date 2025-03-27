@@ -38,7 +38,8 @@ pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --e
 pip install -r requirements-mt-w2v2.txt
 ```
 
-To train the model, change the ** marked ** parameters and run:
+To train the model, change the ** marked ** parameters and run the following script. The script automatically holds out validation data if `do_eval` is set to `True`. To train the final model on all available data after hyperparameter tuning, set `do_eval` to `False` and increase `save_total_limit` to retain the checkpoint corresponding to the best epoch from the previous training run.
+
 ```bash
 python train_multitask_wav2vec2_baseline.py \
     --model_name_or_path NbAiLab/nb-wav2vec2-300m-bokmaal \
