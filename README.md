@@ -38,17 +38,17 @@ pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --e
 pip install -r requirements-mt-w2v2.txt
 ```
 
-To train the model, run:
+To train the model, change the ** marked ** parameters and run:
 ```bash
 python train_multitask_wav2vec2_baseline.py \
     --model_name_or_path NbAiLab/nb-wav2vec2-300m-bokmaal \
-    --dataset_name /path_to_the_competition_data \
-    --cache_dir /cache \
+    --dataset_name **/path_to_the_competition_data** \
+    --cache_dir **/cache** \
     --layer_num_for_class 24 \
     --train_split_name train \
     --label_column_name Score \
     --text_column_name Word \
-    --output_dir /mt-w2v2-model \
+    --output_dir **/mt-w2v2-model** \
     --overwrite_output_dir \
     --remove_unused_columns False \
     --do_train \
@@ -72,16 +72,18 @@ python train_multitask_wav2vec2_baseline.py \
     --save_total_limit 2 \
     --seed 0
 ```
+The training takes approx. 1-2 hours on a single GPU (tested with NVIDIA GeForce RTX 2080 Ti and A100)
+
 To generate and store the predictions on the test set, run:
 ```bash
 python eval_multitask_wav2vec2_baseline.py \
-    --model_name_or_path /path_to_model \
+    --model_name_or_path **/path_to_model** \
     --tokenizer_name_or_path NbAiLab/nb-wav2vec2-300m-bokmaal \
-    --dataset_name /path_to_the_competition_data \
-    --cache_dir /cache \
+    --dataset_name **/path_to_the_competition_data** \
+    --cache_dir **/cache** \
     --label_column_name Score \
     --text_column_name Word \
-    --output_dir /results_for_codabench \
+    --output_dir **/results_for_codabench** \
     --remove_unused_columns False \
     --per_device_eval_batch_size 1 \
     --dataloader_num_workers "$(nproc)"
