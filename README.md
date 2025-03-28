@@ -90,7 +90,7 @@ python eval_multitask_wav2vec2_baseline.py \
     --dataloader_num_workers "$(nproc)"
 ```
 
-The official multi-task wav2vec 2.0 baseline model is available at [🤗 Hub](TODO). The model's performance on the test set is the following:
+The official multi-task wav2vec 2.0 baseline model is available at [🤗 Hub](https://huggingface.co/GetmanY1/wav2vec2-large-multitask-nocasa-baseline). The model's performance on the test set is the following:
 |   F1  | UAR   | Accuracy | MAE (mean absolute error) |
 | ---   | ---   | ---      | ---                       |
 | 37.41 | 36.37 | 54.45    |           0.55            |
